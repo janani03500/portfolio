@@ -1,0 +1,112 @@
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6">
+      <div className="max-w-5xl mx-auto bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-3xl p-8">
+        <div className="text-center mb-12 pt-6">
+          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex items-center justify-center text-5xl font-bold mb-6 shadow-2xl">J</div>
+          <h1 className="text-6xl font-extrabold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">Janani M</h1>
+          <p className="text-xl mt-4 text-gray-300">
+            Computer Science Engineering Student | AI & Web Development Enthusiast
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">About Me</h2>
+          <p className="text-gray-200 leading-8 text-lg">
+            I am a Computer Science Engineering student currently pursuing my 3rd year with a strong interest in Artificial Intelligence, Machine Learning, Python programming, and Web Development. I enjoy learning new technologies and building real-world projects that improve my practical knowledge and problem-solving skills. I am passionate about developing innovative solutions and continuously improving my technical and communication abilities. I am currently seeking internship opportunities to gain industry experience and contribute effectively to technology-driven projects.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">Technical Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              "Python",
+              "HTML",
+              "CSS",
+              "Machine Learning",
+              "Microsoft Excel",
+              "Excel Data Analysis",
+              "GitHub",
+              "Basic Java",
+              "Data Preprocessing",
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="bg-white/20 border border-white/10 hover:scale-105 transition-all duration-300 rounded-2xl p-4 text-center font-semibold shadow-lg"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">Projects</h2>
+
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl hover:translate-y-\[-4px\] transition-all duration-300 mb-5">
+            <h3 className="text-2xl font-bold text-blue-300">Air Quality Prediction System</h3>
+            <p className="mt-2 text-gray-700 leading-7">
+              Developed a machine learning project to predict Air Quality Index (AQI) levels using pollution datasets. The project involved data preprocessing, feature engineering, and model evaluation using Python libraries such as Pandas, NumPy, and Scikit-learn.
+            </p>
+          </div>
+
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl hover:translate-y-\[-4px\] transition-all duration-300 mb-5">
+            <h3 className="text-2xl font-bold text-blue-300">Personal Portfolio Website</h3>
+            <p className="mt-2 text-gray-700 leading-7">
+              Created a responsive portfolio website using HTML and CSS with a clean and user-friendly design to showcase skills, projects, and personal information.
+            </p>
+          </div>
+
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl hover:translate-y-\[-4px\] transition-all duration-300">
+            <h3 className="text-2xl font-bold text-blue-300">Student Management System</h3>
+            <p className="mt-2 text-gray-700 leading-7">
+              Developed a basic system for managing student records and details with a focus on programming logic and data handling.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">Education</h2>
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl hover:translate-y-\[-4px\] transition-all duration-300">
+            <p className="text-xl font-bold text-blue-300">
+              Bachelor of Engineering – Computer Science Engineering
+            </p>
+            <p className="text-gray-300">Currently Pursuing 3rd Year</p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">Contact</h2>
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl space-y-4">
+            <p>
+              <span className="font-semibold">Email:</span>{" "}
+              jananimuthukumaran03@gmail.com
+            </p>
+            <p>
+              <span className="font-semibold">Phone:</span> 9363543438
+            </p>
+            <p>
+              <span className="font-semibold">LinkedIn:</span>{" "}
+              <a
+                href="https://www.linkedin.com/in/janani-m-2b07b92a3"
+                className="text-cyan-300 underline hover:text-cyan-200 transition-all duration-300"
+              >
+                linkedin.com/in/janani-m-2b07b92a3
+              </a>
+            </p>
+            <p>
+              <span className="font-semibold">GitHub:</span>{" "}
+              <a
+                href="https://github.com/janani03500"
+                className="text-cyan-300 underline hover:text-cyan-200 transition-all duration-300"
+              >
+                github.com/janani03500
+              </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
