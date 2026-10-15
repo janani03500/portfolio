@@ -1,67 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Janani Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Janani M — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--mute:#5b677d;--line:#cfd6e3;--accent:#0f766e;--hl:#ffd23f;--on-accent:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surface:#161e33;--ink:#e8ecf5;--mute:#9aa6bf;--line:#2a3452;--accent:#5eead4;--hl:#ffd23f;--on-accent:#0e1424;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#161e33;--ink:#e8ecf5;--mute:#9aa6bf;--line:#2a3452;--accent:#5eead4;--hl:#ffd23f;--on-accent:#0e1424;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;margin:0;letter-spacing:-.02em;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:600}
+nav div{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 88px}
+.hero h1{font-size:clamp(46px,9vw,104px);font-weight:800}
+.hero h1 mark{background:linear-gradient(transparent 58%,var(--hl) 58%);color:inherit;padding:0 .08em}
+.hero p{max-width:34em;font-size:clamp(18px,2.4vw,22px);color:var(--mute);margin:28px 0 36px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+section>.wrap>h2{font-size:clamp(30px,5vw,44px);margin-bottom:28px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chip{font:600 15px "Public Sans",sans-serif;padding:8px 16px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.proj{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.proj[hidden]{display:none}
+.proj h3{font-size:26px}
+.proj p{grid-column:1;margin:4px 0 0;color:var(--mute);max-width:40em}
+.proj .tags{grid-column:1;font-size:15px;font-weight:600;color:var(--accent);margin-top:6px}
+.proj a.go{grid-row:1;grid-column:2;align-self:start;font-weight:600;white-space:nowrap}
+.job{display:grid;grid-template-columns:150px 1fr;gap:6px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.job time{color:var(--mute);font-weight:500}
+.job h3{font-size:22px}.job p{margin:6px 0 0;color:var(--mute)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.skills h3{font-size:20px;margin-bottom:8px}.skills p{margin:0;color:var(--mute)}
+.contact{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(28px,6vw,56px);font-weight:700;letter-spacing:-.02em;word-break:break-word}
+footer{padding:40px 0 56px;color:var(--mute);font-size:15px}
+@media (max-width:600px){.job{grid-template-columns:1fr}.proj{grid-template-columns:1fr}.proj a.go{grid-row:auto;grid-column:1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+ul.plain{list-style:none;margin:0;padding:0}ul.plain li{padding:12px 0;border-bottom:1px solid var(--line)}ul.plain span{color:var(--mute);display:block;font-size:15px}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.two h3{font-size:22px;margin-bottom:8px}</style>
 </head>
-
 <body>
-
-<div class="container">
-
-  <div class="header">
-    <div class="logo">J</div>
-    <h1>Janani M</h1>
-    <p>Computer Science Engineering Student | AI & Web Development Enthusiast</p>
-  </div>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science Engineering student currently pursuing my 3rd year
-      with a strong interest in Artificial Intelligence, Machine Learning,
-      Python programming, and Web Development.
-    </p>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-
-    <div class="skills">
-      <span>Python</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Machine Learning</span>
-      <span>Microsoft Excel</span>
-      <span>GitHub</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>Air Quality Prediction System</h3>
-      <p>Machine learning project for AQI prediction.</p>
-    </div>
-
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Responsive portfolio using HTML and CSS.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-
-    <p>Email: jananimuthukumaran03@gmail.com</p>
-    <p>Phone: 9363543438</p>
-
-    <a href="https://github.com/janani03500">GitHub</a><br>
-    <a href="https://www.linkedin.com/in/janani-m-2b07b92a3">LinkedIn</a>
-  </section>
-
+<div class="wrap">
+<nav><span>Janani M</span><div><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#more">Certifications</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<h1>I build <mark>web apps</mark> from the interface to the database.</h1>
+<p>Full-stack development intern and Computer Science student in Tamil Nadu. I work with HTML, CSS, JavaScript, Python, and SQL, and I'm looking for an entry-level software development role.</p>
+<div class="btns"><a class="btn main" href="#work">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</header>
 </div>
 
+<section id="work"><div class="wrap">
+<h2>Projects</h2>
+<div id="list">
+<article class="proj"><h3>NutriVision AI</h3><p>Final year project (ongoing). A web-based system that helps healthcare workers assess early risk of child undernutrition, with transparent, explainable predictions behind the interface.</p><div class="tags">Python, Machine Learning, Neural Networks, HTML, CSS</div></article>
+<article class="proj"><h3>Gamified Learning Platform for Rural Education</h3><p>A learning platform that uses game-style lessons to engage students in rural schools. Presented at Krishnasamy College of Engineering.</p></article>
+<article class="proj"><h3>Graphical Password Authentication System</h3><p>A login system that replaces typed passwords with graphical ones. Presented at a national symposium at Arunai Engineering College.</p></article>
+<article class="proj"><h3>Customer Delinquency Prediction</h3><p>Built a model that classifies loan-default risk from customer data and turned the results into a collections strategy.</p><div class="tags">Python, Pandas, NumPy, Scikit-learn, Excel</div></article>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div class="job"><time>Jul – Aug 2026</time><div><h3>Full-Stack Development Intern, Codomax Digital Solutions</h3><p>Remote internship.</p></div></div>
+<div class="job"><time>Internship</time><div><h3>Web Development Intern, Askan Technology and Max Technology</h3><p>Worked on live web development tasks and project-based training in Puducherry and Cuddalore.</p></div></div>
+<div class="job"><time>Completed</time><div><h3>UI/UX Design Course, Naan Mudhalvan Scheme</h3><p>Government of Tamil Nadu skills program.</p></div></div>
+<div class="job"><time>2023 – 2027</time><div><h3>B.E. Computer Science and Engineering</h3><p>St. Anne's College of Engineering and Technology, Anna University. CGPA 8.3 / 10.</p></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Frontend</h3><p>HTML, CSS, JavaScript, UI/UX design, WordPress</p></div>
+<div><h3>Backend and data</h3><p>Python, SQL, Pandas, NumPy, Scikit-learn</p></div>
+<div><h3>Tools</h3><p>Git and GitHub, VS Code, Jupyter Notebook, Excel</p></div>
+</div>
+</div></section>
+
+<section id="more"><div class="wrap">
+<div class="two">
+<div><h2 style="font-size:30px;margin-bottom:16px">Certifications</h2><ul class="plain">
+<li>Google Cloud Fundamentals: Core Infrastructure <span>January 2026</span></li>
+<li>Python Programming Fundamentals, Microsoft (Coursera) <span>December 2025</span></li>
+<li>Build a Free Website with WordPress, Coursera <span>August 2025</span></li>
+<li>UI/UX Design, Naan Mudhalvan Scheme <span>Completed</span></li>
+<li>GenAI Powered Data Analytics Job Simulation, Tata (Forage) <span>July 2026</span></li>
+</ul></div>
+<div><h2 style="font-size:30px;margin-bottom:16px">Talks and activities</h2><ul class="plain">
+<li>Graphical Password Authentication System <span>National symposium, Arunai Engineering College</span></li>
+<li>Gamified Learning Platform for Rural Education <span>Krishnasamy College of Engineering</span></li>
+<li>Air Quality Prediction using AI <span>Technical conference</span></li>
+<li>Google Student Ambassador Program <span>Participation certificate, July 2026</span></li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact</h2>
+<a class="contact" href="mailto:jananimuthukumaran03@gmail.com">jananimuthukumaran03@gmail.com</a>
+<p style="color:var(--mute);margin-top:16px">Panruti, Cuddalore, Tamil Nadu &nbsp; <a href="https://github.com/janani03500">GitHub</a> &nbsp; <a href="https://linkedin.com/in/janani-m-2b07b92a3">LinkedIn</a></p>
+<footer>© 2026 Janani M</footer>
+</div></section>
 </body>
 </html>
